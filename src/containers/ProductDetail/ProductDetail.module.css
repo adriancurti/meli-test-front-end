@@ -1,0 +1,145 @@
+.ProductDetail {
+    margin: 0 auto;
+    width: 76%;
+}
+
+.Categories {
+    text-align: left;
+    margin: 16px 0px;
+    min-height: 19px;
+}
+
+.PathFromRoot {
+    font-size: 14px;
+    color: #999999;
+}
+
+.Separator {
+    margin: 0 10px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.EndOfPathFromRoot {
+    font-size: 14px;
+    font-weight: 500;
+    color: #999999;
+}
+
+.Selected {
+    margin-bottom: 100px;
+    padding: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: white;
+}
+
+.Article {
+    position: relative;
+    text-align: left;
+    min-height: 500px;
+    box-sizing: border-box;
+}
+
+.PictureContainer {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.PictureContainer img {
+    margin: 32px;
+    width: 680px;
+    border-radius: 4px;
+}
+
+.Picture {
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.DescriptionLabel {
+    margin-left: 32px;
+    font-size: 28px;
+    color: #333333;
+}
+
+.DescriptionText {
+    margin: 32px;
+    max-width: 680px;
+    font-size: 16px;
+    color: #999999;
+}
+
+.BuyContainer {
+    background: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 32px;
+    text-align: left;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.ConditionAndSoldQuantity {
+    font-size: 14px;
+    color: #666666;
+}
+
+.PriceContainer {
+    margin: 32px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: left;
+    font-size: 46px;
+    color: #333333;
+}
+
+.Currency {
+    margin-right: 10px;
+}
+
+.Amount {
+    margin-right: 5px;
+}
+
+.Decimals {
+    margin-bottom: 16px;
+    font-size: 23px;
+}
+
+.FreeShipping {
+    margin-left: 10px;
+    height: 35px;
+    width: 35px;
+}
+
+.Title {
+    margin-top: 16px;
+    text-align: left;
+    font-size: 24px;
+    color: #333333;
+    max-width: 250px;
+}
+
+.ButtonBuy {
+    height: 48px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #3483fa;
+    background: #3483fa;
+    font-size: 18px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ButtonBuy:hover {
+    border: 1px solid #3483fa;
+    background: white;
+    color: #3483fa;
+}

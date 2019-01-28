@@ -1,0 +1,36 @@
+html {
+    position: relative;
+    box-sizing: border-box;
+    min-width: 768px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    background: #eeeeee;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-input-placeholder {
+    font-size: 16px;
+    color: #999999;
+}
+
+::-moz-placeholder {
+    font-size: 16px;
+    color: #999999;
+}
+
+::-ms-input-placeholder {
+    font-size: 16px;
+    color: #999999;
+}

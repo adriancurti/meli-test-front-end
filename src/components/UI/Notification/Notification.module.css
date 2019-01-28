@@ -1,0 +1,74 @@
+.Notification {
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+}
+
+.Notification h2 {
+    font-size: 27px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.Notification p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+.Text {
+    margin-left: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+.Icon {
+    margin-left: 10px;
+    display: flex;
+    font-size: 45px;
+    opacity: 0.7;
+}
+
+.IconWarning {
+    margin-left: 10px;
+    display: flex;
+    font-size: 40px;
+    opacity: 0.7;
+}
+
+.Toast {
+    border-radius: 4px;
+    opacity: 0.98;
+}
+
+.ToastSpinner {
+    background-color: #005599;
+    color: white;
+    border-radius: 4px;
+    opacity: 0.98;
+}
+
+.ToastBody {
+    width: 100%;
+}
+
+.ToastProgress {
+    height: 10px;
+}
+
+@media (max-width: 480px) {
+    .Toast {
+        border-radius: 0%;
+    }
+
+    .ToastSpinner {
+        border-radius: 0%;
+    }
+
+    .ToastConfirm {
+        border-radius: 0%;
+    }
+}
