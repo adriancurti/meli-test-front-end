@@ -1,7 +1,7 @@
 {
   "name": "meli-test-front-end",
   "version": "1.0.0",
-  "description": "Web App with React.js",
+  "description": "Front-end Web App with React and Redux",
   "author": "Adrian Curti",
   "private": true,
   "dependencies": {

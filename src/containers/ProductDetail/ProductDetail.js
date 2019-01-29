@@ -29,7 +29,7 @@ class ProductDetail extends Component {
         const path = this.props.location.pathname;
         const index = path.split('/').length - 1;
         let id = path.split('/')[index];
-        this.props.onProductsGet(id, this.props.currencies, this.props.serverURL);
+        this.props.onProductsGet(id, this.props.serverURL);
     }
 
     searchChangedHandler = search => {
@@ -83,7 +83,7 @@ class ProductDetail extends Component {
                         <div className={classes.Title}>{selected.title}</div>
                         <div className={classes.PriceContainer}>
                             <div className={classes.Currency}>{selected.price.currency}</div>
-                            <div className={classes.Amount}>{selected.price.amount.toLocaleString()}</div>
+                            <div className={classes.Amount}>{selected.price.amount.toLocaleString('es')}</div>
                             <div className={classes.Decimals}>{decimals >= 10 ? decimals : decimals + '0'}</div>
                             {selected.free_shipping ?
                                 <img className={classes.FreeShipping} src={imageFreeShipping} alt="Envío Gratis" draggable="false" /> : null}
@@ -124,15 +124,14 @@ const mapStateToProps = state => {
         data: state.products.data,
         selected: state.products.selected,
         error: state.products.error,
-        loading: state.products.loading,
-        currencies: state.currencies.data
+        loading: state.products.loading
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
         onProductsResetSelected: () => dispatch(actions.productsResetSelected()),
-        onProductsGet: (id, currencies, serverURL) => dispatch(actions.productsGet(id, currencies, serverURL)),
+        onProductsGet: (id, serverURL) => dispatch(actions.productsGet(id, serverURL)),
         onProductsResetError: () => dispatch(actions.productsResetError())
     };
 };

@@ -1,6 +1,6 @@
 # Meli Test Front End 1.0.0
 
-> A React.js project
+> Front-end Web App with React and Redux
 
 ## Build Setup
 

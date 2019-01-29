@@ -9,7 +9,6 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import currenciesReducer from './store/reducers/currencies';
 import envReducer from './store/reducers/environment';
 import productsReducer from './store/reducers/products';
 
@@ -17,7 +16,6 @@ import productsReducer from './store/reducers/products';
 const composeEnhancers = compose;
 
 const rootReducer = combineReducers({
-    currencies: currenciesReducer,
     env: envReducer,
     products: productsReducer
 });

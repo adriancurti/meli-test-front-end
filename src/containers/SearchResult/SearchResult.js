@@ -43,13 +43,13 @@ class SearchResult extends Component {
                 let query = {
                     q: param[1]
                 };
-                this.props.onProductsGetList(query, this.props.currencies, this.props.serverURL);
+                this.props.onProductsGetList(query, this.props.serverURL);
                 break;
             }
         }
     }
 
-    selectItemHandler = id => {
+    itemSelectedHandler = id => {
         this.props.history.push({ pathname: `/items/${id}` });
     }
 
@@ -65,7 +65,7 @@ class SearchResult extends Component {
                         let query = {
                             q: search
                         };
-                        this.props.onProductsGetList(query, this.props.currencies, this.props.serverURL);
+                        this.props.onProductsGetList(query, this.props.serverURL);
                     }
                     break;
                 }
@@ -110,22 +110,22 @@ class SearchResult extends Component {
         );
 
         if (this.props.data) {
-            products = this.props.data.items.slice(0, 4).map((item, index) => {
+            products = this.props.data.items.map((item, index) => {
                 let decimals = item.price.decimals;
                 return (
                     <Fragment key={index + ',' + item.id}>
                         <article className={classes.Article}>
-                            <div className={classes.PictureContainer} onClick={() => this.selectItemHandler(item.id)}>
+                            <div className={classes.PictureContainer} onClick={() => this.itemSelectedHandler(item.id)}>
                                 <img className={classes.Picture} src={item.picture} alt="Producto" draggable="false" />
                             </div>
                             <div className={classes.PriceContainer}>
                                 <div className={classes.Currency}>{item.price.currency}</div>
-                                <div className={classes.Amount}>{item.price.amount.toLocaleString()}</div>
+                                <div className={classes.Amount}>{item.price.amount.toLocaleString('es')}</div>
                                 <div className={classes.Decimals}>{decimals >= 10 ? decimals : decimals + '0'}</div>
                                 {item.free_shipping ?
                                     <img className={classes.FreeShipping} src={imageFreeShipping} alt="Envío Gratis" draggable="false" /> : null}
                             </div>
-                            <div className={classes.Title} onClick={() => this.selectItemHandler(item.id)}>{item.title}</div>
+                            <div className={classes.Title} onClick={() => this.itemSelectedHandler(item.id)}>{item.title}</div>
                             <div className={classes.Address}>{item.address}</div>
                         </article>
                         {this.props.data.items.length > 3 && index < 3 ? <div className={classes.Divider}></div> : null}
@@ -172,15 +172,14 @@ const mapStateToProps = state => {
         query: state.products.query,
         data: state.products.data,
         error: state.products.error,
-        loading: state.products.loading,
-        currencies: state.currencies.data
+        loading: state.products.loading
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
         onProductsClean: () => dispatch(actions.productsClean()),
-        onProductsGetList: (query, currencies, serverURL) => dispatch(actions.productsGetList(query, currencies, serverURL)),
+        onProductsGetList: (query, serverURL) => dispatch(actions.productsGetList(query, serverURL)),
         onProductsResetError: () => dispatch(actions.productsResetError())
     };
 };
