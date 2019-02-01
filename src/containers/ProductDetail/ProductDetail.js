@@ -5,7 +5,8 @@ import { toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-import classes from './ProductDetail.module.css';
+import classes from './ProductDetail.module.sass';
+import Backdrop from '../../components/UI/Backdrop/Backdrop';
 import Notification, { toastOptions } from '../../components/UI/Notification/Notification';
 import SearchBox from '../SearchBox/SearchBox';
 import imageFreeShipping from '../../assets/images/ic_shipping@2x.png.png';
@@ -102,6 +103,7 @@ class ProductDetail extends Component {
 
         return (
             <Fragment>
+                <Backdrop show={this.props.loading} clicked={() => { }} />
                 <SearchBox
                     search={''}
                     changed={this.searchChangedHandler} />

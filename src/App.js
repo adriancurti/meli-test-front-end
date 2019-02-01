@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { ToastContainer, Flip } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import classes from './App.module.css';
+import classes from './App.module.sass';
 import asyncComponent from './hoc/asyncComponent/asyncComponent';
 import Home from './containers/Home/Home';
 import Layout from './hoc/Layout/Layout';

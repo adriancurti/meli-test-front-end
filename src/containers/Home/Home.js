@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import classes from './Home.module.css';
+import classes from './Home.module.sass';
 import SearchBox from '../SearchBox/SearchBox';
 
 class Home extends Component {

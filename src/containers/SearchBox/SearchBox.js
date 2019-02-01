@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import classes from './SearchBox.module.css';
+import classes from './SearchBox.module.sass';
 import imageLogoML from '../../assets/images/Logo_ML@2x.png.png';
 import imageIconSearch from '../../assets/images/ic_Search@2x.png.png';
 

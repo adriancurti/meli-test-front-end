@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle, faCheckCircle, faExclamationTriangle, faExclamationCircle, faCog } from '@fortawesome/free-solid-svg-icons';
 
-import classes from './Notification.module.css';
+import classes from './Notification.module.sass';
 
 export const toastOptions = {
     position: "top-right",
